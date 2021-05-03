@@ -68,7 +68,6 @@ echo '</div>';
 echo '</li>';
 echo '</ol>';
 
-
 ?>
 </aside>
 

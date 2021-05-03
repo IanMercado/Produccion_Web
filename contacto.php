@@ -10,7 +10,7 @@ require_once('encabezado.php');
         <img src="imagenes/portada-contacto.jpg" alt="portada-contacto" class="d-block auto img-fluid h-20">  
        <h2 class="pt-3">CONTACTO</h2>   
        <div class="container">
-       <p class="text-left pt-5 pb-5">Póngase en contacto con nuestros asesores que los guiarán con sus dudas.
+       <br><p class="text-left pt-5 pb-5">Póngase en contacto con nuestros asesores que los guiarán con sus dudas.
        </p>
 
   <form class="needs-validation" novalidate action="destino.php" method="POST">

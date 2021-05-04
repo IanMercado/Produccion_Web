@@ -66,7 +66,7 @@ $array_productos = array (
     'id_categoria' => '2', // La categoria 2 es MOUSE
     'nombre_categoria' => 'Mouse',
     'id_producto' => '5',
-    'nombre_producto' => 'MOUSE LOGITECH MX ANYWHERE 3',
+    'nombre_producto' => 'MOUSE LOGITECH M171',
     'precio' => '28.00',
     'destacado' => false,
     'descripcion' => 'Mouse compacto de alto rendimiento inalámbrico'),
@@ -283,7 +283,7 @@ $array_productos = array (
         'nombre_producto' => 'CLUTCH GM40 BLACK',
         'precio' => '20.00',
         'destacado' => false,
-        'descripcion' => 'El Mouse Clutch GM40 Gaming está diseñado para el gaming con su forma sólida y funciones únicas. 
+        'descripcion' => 'El Mouse Clutch GM41 Gaming está diseñado para el gaming con su forma sólida y funciones únicas. 
         Con un preciso sensor óptico de hasta 5000 dpi, los gamers tienen más control sobre su juego.'  
     ),
     '23' => array(

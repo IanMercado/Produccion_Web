@@ -4,7 +4,7 @@ require_once('encabezado.php');
 
 <body>
     <div id="portada">
-        <img src="imagenes/portada-detalle.jpg" alt="portada-productos" class="d-block auto img-fluid pb-3 pt-5">
+        <class="d-block auto img-fluid pb-3 pt-5">
     </div>
 
     <div class="row">

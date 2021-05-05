@@ -1,6 +1,7 @@
 /*FUENTES////////////////*/
 body{
-    font-family: 'Assistant', sans-serif;  
+    font-family: 'Assistant', sans-serif; 
+    /*box-sizing: content-box;*/
 }
 h2{
     text-transform: uppercase;

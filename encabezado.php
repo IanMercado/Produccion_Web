@@ -9,6 +9,8 @@ function activo($menu)
     echo strpos($_SERVER['PHP_SELF'], $menu) ? 'active' : 'Falso';
 }
 
+//include_once 'login.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -53,15 +55,15 @@ function activo($menu)
                     <li class="nav-item <?php activo('productos.php') ?>">
                         <a class="nav-link text-decoration-none" href="productos.php">Productos</a>
                     </li>
-                    <li class="nav-item <?php activo('tez.php') ?>">
+                    <li class="nav-item <?php activo('Auriculares.php') ?>">
                         <a class="nav-link text-decoration-none" href="Auriculares.php">Auriculares</a>
                     </li>
 
-                    <li class="nav-item <?php activo('rubor.php') ?>">
+                    <li class="nav-item <?php activo('Mouse.php') ?>">
                         <a class="nav-link text-decoration-none" href="Mouse.php">Mouses</a>
                     </li>
 
-                    <li class="nav-item <?php activo('ojos.php') ?>">
+                    <li class="nav-item <?php activo('Teclado.php') ?>">
                         <a class="nav-link text-decoration-none" href="Teclado.php">Teclados</a>
                     </li>
 

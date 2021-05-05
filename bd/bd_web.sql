@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-05-2021 a las 23:26:59
+-- Tiempo de generación: 05-05-2021 a las 06:33:27
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -148,33 +148,76 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`id_producto`, `marca`, `categoria`, `precio`) VALUES
-(28, 1, 1, 49.00),
-(29, 2, 1, 50.00),
-(30, 3, 1, 70.00),
-(32, 10, 2, 28.00),
-(33, 11, 2, 28.00),
-(34, 12, 2, 33.00),
-(35, 19, 3, 32.00),
-(36, 20, 3, 32.00),
-(37, 21, 3, 32.00),
-(38, 4, 1, 60.00),
-(39, 5, 1, 60.00),
-(40, 6, 1, 60.00),
-(41, 13, 2, 30.00),
-(42, 14, 2, 35.00),
-(43, 15, 2, 35.00),
-(44, 22, 3, 32.00),
-(45, 23, 3, 32.00),
-(46, 24, 3, 32.00),
-(47, 7, 1, 31.00),
-(48, 8, 1, 31.00),
-(49, 9, 1, 31.00),
-(50, 16, 2, 20.00),
-(51, 17, 2, 23.00),
-(52, 18, 2, 20.00),
-(53, 25, 3, 20.00),
-(54, 26, 3, 23.00),
-(55, 27, 3, 20.00);
+(1, 1, 1, 49.00),
+(2, 2, 1, 50.00),
+(3, 3, 1, 70.00),
+(4, 10, 2, 28.00),
+(5, 11, 2, 28.00),
+(6, 12, 2, 33.00),
+(7, 19, 3, 32.00),
+(8, 20, 3, 32.00),
+(9, 21, 3, 32.00),
+(10, 4, 1, 60.00),
+(11, 5, 1, 60.00),
+(12, 6, 1, 60.00),
+(13, 13, 2, 30.00),
+(14, 14, 2, 35.00),
+(15, 15, 2, 35.00),
+(16, 22, 3, 32.00),
+(17, 23, 3, 32.00),
+(18, 24, 3, 32.00),
+(19, 7, 1, 31.00),
+(20, 8, 1, 31.00),
+(21, 9, 1, 31.00),
+(22, 16, 2, 20.00),
+(23, 17, 2, 23.00),
+(24, 18, 2, 20.00),
+(25, 25, 3, 20.00),
+(26, 26, 3, 23.00),
+(27, 27, 3, 20.00);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` int(2) NOT NULL,
+  `rol` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `roles`
+--
+
+INSERT INTO `roles` (`id`, `rol`) VALUES
+(1, 'administrador'),
+(2, 'usuario');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` int(10) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `mail` varchar(50) NOT NULL,
+  `password` varchar(10) NOT NULL,
+  `rol_id` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `username`, `mail`, `password`, `rol_id`) VALUES
+(6, 'IanMercado', 'ian.mercado@mail.com', 'admin', 1),
+(7, 'RamiroVita', 'ramiro.vita@mail.com', 'admin', 1),
+(8, 'GonzaloMonzon', 'gonzalo.monzon@mail.com', 'admin', 1),
+(9, 'usuario', 'usuario@mail.com', '123', 2);
 
 --
 -- Índices para tablas volcadas
@@ -210,6 +253,19 @@ ALTER TABLE `producto`
   ADD KEY `categoria` (`categoria`);
 
 --
+-- Indices de la tabla `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `rol_id` (`rol_id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -223,19 +279,31 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT de la tabla `marca`
 --
 ALTER TABLE `marca`
-  MODIFY `id_marca` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_marca` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT de la tabla `modelo`
 --
 ALTER TABLE `modelo`
-  MODIFY `id_modelo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=262;
+  MODIFY `id_modelo` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=263;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
   MODIFY `id_producto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+
+--
+-- AUTO_INCREMENT de la tabla `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
@@ -253,6 +321,12 @@ ALTER TABLE `marca`
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_ibfk_2` FOREIGN KEY (`categoria`) REFERENCES `categoria` (`id_categoria`) ON UPDATE CASCADE,
   ADD CONSTRAINT `producto_ibfk_3` FOREIGN KEY (`marca`) REFERENCES `marca` (`id_marca`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -5,9 +5,9 @@ require_once('encabezado.php');
 
 <html>
   <body>  
-
+  <br>
 <div id="Contacto">
-        <img src="imagenes/portada-contacto.jpg" alt="portada-contacto" class="d-block auto img-fluid h-20">  
+        <class="d-block auto img-fluid h-20">  
        <h2 class="pt-3">CONTACTO</h2>   
        <div class="container">
        <br><p class="text-left pt-5 pb-5">Póngase en contacto con nuestros asesores que los guiarán con sus dudas.

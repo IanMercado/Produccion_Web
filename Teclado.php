@@ -47,7 +47,9 @@ require_once('encabezado.php');
                 echo '</div>';
                 echo '</li>';
                 echo '</ol>';
+
                 ?>
+                
             </aside>
 
             <h2 class="col-8 pl-5">TECLADOS</h2>
@@ -61,9 +63,9 @@ require_once('encabezado.php');
         <div class="row">
             <?php
 
-            $a_productos = json_decode(file_get_contents('productos.json'), true);
+             $a_productos = json_decode(file_get_contents('productos.json'), true);
 
-            foreach ($a_productos as $a_producto) {
+             foreach ($a_productos as $a_producto) {
                 if ((in_array($a_producto['id_marca'], $id_marca) || empty($id_marca)) &&
                     ((in_array($a_producto['id_categoria'], $id_categoria) || empty($id_categoria)))
                 ) {
@@ -76,7 +78,7 @@ require_once('encabezado.php');
                         $pr_precio = $a_producto['precio'];
             ?>
 
-<div class="col-12 col-lg-4 col-md-6">
+                    <div class="col-12 col-lg-4 col-md-6">
                         <div class="producto-card mx-3 my-3">
                             <a href="detalle.php?id_producto=<?php echo $pr_id ?>";>
                             <img class="img-card" src="<?php echo $pr_im ?>"></a>
@@ -86,7 +88,7 @@ require_once('encabezado.php');
                             </a>
                         </div>
                     </div>
-            <?php
+              <?php
                     }
                 }
             } ?>

@@ -9,7 +9,7 @@ function activo($menu)
     echo strpos($_SERVER['PHP_SELF'], $menu) ? 'active' : 'Falso';
 }
 
-//include_once 'login.php';
+require_once('login.php');
 
 ?>
 
@@ -50,21 +50,21 @@ function activo($menu)
 
             <a class="navbar-brand" href="index.php"> <img src="imagenes/logo.png" alt="imagen logo" class="logo mx-auto d-block"></a>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="collapse navbar-collapse z-index:2" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item <?php activo('productos.php') ?>">
                         <a class="nav-link text-decoration-none" href="productos.php">Productos</a>
                     </li>
-                    <li class="nav-item <?php activo('Auriculares.php') ?>">
-                        <a class="nav-link text-decoration-none" href="Auriculares.php">Auriculares</a>
+                    <li class="nav-item <?php activo('auriculares.php') ?>">
+                        <a class="nav-link text-decoration-none" href="auriculares.php">Auriculares</a>
                     </li>
 
-                    <li class="nav-item <?php activo('Mouse.php') ?>">
-                        <a class="nav-link text-decoration-none" href="Mouse.php">Mouses</a>
+                    <li class="nav-item <?php activo('mouse.php') ?>">
+                        <a class="nav-link text-decoration-none" href="mouse.php">Mouses</a>
                     </li>
 
-                    <li class="nav-item <?php activo('Teclado.php') ?>">
-                        <a class="nav-link text-decoration-none" href="Teclado.php">Teclados</a>
+                    <li class="nav-item <?php activo('teclado.php') ?>">
+                        <a class="nav-link text-decoration-none" href="teclado.php">Teclados</a>
                     </li>
 
                     <li class="nav-item <?php activo('contacto.php') ?>">

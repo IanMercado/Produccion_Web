@@ -1,5 +1,5 @@
 <?php
-include_once 'login_bd.php';
+require_once('login_bd.php');
 
 session_start();
 
@@ -64,13 +64,21 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+
+    <link rel="stylesheet" href="css/hardgamers.css">
+
 </head>
 <body>
     <form action="#" method="POST">
+    <div class="container">
+        <div class="row">
+          <!-- class="float-right z-index:1" -->
         Username: <br/><input type="text" name="username"><br/>
         Mail: <br/><input type="text" name="mail"><br/>
         Password: <br/><input type="text" name="password"><br/>
         <input type="submit" value="Iniciar sesión">
+        </div>
+    </div>
     </form>
 </body>
 </html>

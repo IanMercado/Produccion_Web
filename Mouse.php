@@ -12,6 +12,7 @@ require_once('encabezado.php');
         <div class="row">
 
             <aside class="col-2 row">
+               
                 <?php
 
                 if (isset($_REQUEST['id_marca']))
@@ -43,13 +44,12 @@ require_once('encabezado.php');
                 };
                 echo '</div>';
                 echo '</li>';
-
-
+                
                 ?>
 
             </aside>
 
-            <h2 class="col-8 pl-5">MOUSE</h2>
+            <h2 class="col-8 pl-5">MOUSES</h2>
 
         </div>
     </div>

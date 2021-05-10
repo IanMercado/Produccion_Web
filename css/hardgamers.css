@@ -178,3 +178,9 @@ label{
 .valoracion input:checked ~ label {
     color: black;
 }
+
+.login{
+    float: right;
+}
+
+

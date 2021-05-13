@@ -48,10 +48,12 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
             break;
     
             default:
+                echo "Bienvenido ".$username. 
+                     "<p>Has iniciado sesión con ".$mail;
         }
     }else {
         // no existe el usuario
-        echo "El usuario, mail o contraseña son incorrectos";
+        echo "El usuario, mail o contraseña son incorrectos.";
     }
 }
 

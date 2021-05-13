@@ -9,7 +9,7 @@ function activo($menu)
     echo strpos($_SERVER['PHP_SELF'], $menu) ? 'active' : 'Falso';
 }
 
-require_once('login.php');
+//require_once('login.php');
 
 ?>
 
@@ -18,11 +18,11 @@ require_once('login.php');
 
 <head>
     <meta charset="UTF-8">
-    <title> <?php echo $titulo ?> </title>
+    <title> <?php echo $titulo; ?> </title>
 
-    <!--ICONOS-->
-    <link rel="shortcut icon" href="fav/favicon.ico" type="image/x-icon">
-
+    <!--ICONO Favicon-->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/favicon_io/favicon-32x32.png">
+    
 
     <!--META-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
@@ -69,6 +69,10 @@ require_once('login.php');
 
                     <li class="nav-item <?php activo('contacto.php') ?>">
                         <a class="nav-link text-decoration-none" href="contacto.php">Contacto</a>
+                    </li>
+
+                    <li class="nav-item <?php activo('login.php') ?>">
+                        <a class="nav-link text-decoration-none" href="login.php">Login</a>
                     </li>
 
                 </ul>

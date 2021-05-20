@@ -1,6 +1,6 @@
 /*FUENTES////////////////*/
 body{
-    font-family: 'Assistant', sans-serif; 
+    font-family: 'Assistant', sans-serif;
     /*box-sizing: content-box;*/
 }
 h2{
@@ -11,7 +11,7 @@ h2,h3{
     font-family: 'Archivo', sans-serif;
 }
 h4{
-    font-family: 'Assistant', sans-serif; 
+    font-family: 'Assistant', sans-serif;
 }
 
 
@@ -179,8 +179,11 @@ label{
     color: black;
 }
 
-/*.login{
-    float: right;
-}*/
 
+.login-box{
+    top: 60%;
+    left: 40%;
+    right: 40%;
+    position: absolute;
+}
 

@@ -1,5 +1,6 @@
 <?php
 require_once('login_bd.php');
+//require_once('encabezado.php');
 
 session_start();
 
@@ -48,18 +49,18 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
             break;
     
             default:
-                echo "Bienvenido ".$username. 
-                     "<p>Has iniciado sesión con ".$mail;
+                echo "</div><center> ¡Bienvenido ".$username."!". 
+                     "<p> Has iniciado sesión con ".$mail;
         }
     }else {
         // no existe el usuario
-        echo "El usuario, mail o contraseña son incorrectos.";
+        echo "</div><center> El usuario, mail o contraseña son incorrectos.";
     }
 }
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,18 +70,24 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
 
     <link rel="stylesheet" href="css/hardgamers.css">
 
-</head>
-<body>
+</head> 
+<body> -->
+<link rel="stylesheet" href="css/hardgamers.css"> 
     <form action="#" method="POST">
-    <div class="container">
-        <div class="row">
-          <!-- class="float-right z-index:1" -->
-        Username: <br/><input type="text" name="username"><br/>
-        Mail: <br/><input type="text" name="mail"><br/>
-        Password: <br/><input type="text" name="password"><br/>
-        <input type="submit" value="Iniciar sesión">
+        <div class="container">
+            <div class="login-box">
+            <!-- class="float-right z-index:1" -->
+            Username: <br/><input type="t   ext" name="username"><br/>
+            Mail: <br/><input type="email" name="mail"><br/>
+            Password: <br/><input type="password" name="password"><br/>
+            <input type="submit" value="Iniciar sesión">
+            </div>
         </div>
-    </div>
     </form>
-</body>
-</html>
+
+<!-- </body>
+</html> -->
+
+<?php
+//require_once('pie.php');
+?>

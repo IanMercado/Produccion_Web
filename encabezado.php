@@ -9,8 +9,6 @@ function activo($menu)
     echo strpos($_SERVER['PHP_SELF'], $menu) ? 'active' : 'Falso';
 }
 
-//require_once('login.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -52,6 +50,7 @@ function activo($menu)
 
             <div class="collapse navbar-collapse z-index:2" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto">
+                    
                     <li class="nav-item <?php activo('productos.php') ?>">
                         <a class="nav-link text-decoration-none" href="productos.php">Productos</a>
                     </li>
@@ -71,11 +70,8 @@ function activo($menu)
                         <a class="nav-link text-decoration-none" href="contacto.php">Contacto</a>
                     </li>
 
-                    <li class="nav-item <?php activo('login.php') ?>">
-                        <a class="nav-link text-decoration-none" href="login.php">Login</a>
-                    </li>
-
                 </ul>
             </div>
         </nav>
     </header>
+    <br>

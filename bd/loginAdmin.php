@@ -1,12 +1,12 @@
 <?php
-    
+
     session_start();
 
     if(!isset($_SESSION['rol'])){
-        header('location: login.php');
+        header('location: admin.php');
     }else{
-        if($_SESSION['rol'] != 2){
-            header('location: login.php');
+        if($_SESSION['rol'] != 1){
+            header('location: admin.php');
         }
     }
 ?>
@@ -20,6 +20,6 @@
     <title>Admin</title>
 </head>
 <body>
-    <h1>Usuario</h1>
+    <h1>Administrador</h1>
 </body>
-</html> 
+</html>

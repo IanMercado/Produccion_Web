@@ -48,7 +48,6 @@ require_once('encabezado.php');
                 echo '</div>';
                 echo '</li>';
 
-
                 ?>
 
             </aside>

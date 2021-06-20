@@ -58,16 +58,20 @@ function activo($menu)
                         <a class="nav-link text-decoration-none" href="auriculares.php">Auriculares</a>
                     </li>
 
-                    <li class="nav-item <?php activo('mouse.php') ?>">
-                        <a class="nav-link text-decoration-none" href="mouse.php">Mouses</a>
+                    <li class="nav-item <?php activo('mouses.php') ?>">
+                        <a class="nav-link text-decoration-none" href="mouses.php">Mouses</a>
                     </li>
 
-                    <li class="nav-item <?php activo('teclado.php') ?>">
-                        <a class="nav-link text-decoration-none" href="teclado.php">Teclados</a>
+                    <li class="nav-item <?php activo('teclados.php') ?>">
+                        <a class="nav-link text-decoration-none" href="teclados.php">Teclados</a>
                     </li>
 
                     <li class="nav-item <?php activo('contacto.php') ?>">
                         <a class="nav-link text-decoration-none" href="contacto.php">Contacto</a>
+                    </li>
+
+                    <li class="nav-item <?php activo('admin.php') ?>">
+                        <a class="nav-link text-decoration-none" href="admin.php">#</a>
                     </li>
 
                 </ul>

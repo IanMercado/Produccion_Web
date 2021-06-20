@@ -44,9 +44,6 @@ require_once('encabezado.php');
                 };
                 echo '</div>';
                 echo '</li>';
-                echo '</div>';
-                echo '</li>';
-                echo '</ol>';
 
                 ?>
                 

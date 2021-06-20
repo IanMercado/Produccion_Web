@@ -49,12 +49,12 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
             break;
     
             default:
-                echo "<div style='margin-top: 300px;'>¡Bienvenido ".$username."!". 
+                echo "<div style='margin-top: 40px;'><center> ¡Bienvenido ".$username."!". 
                      "<p> Has iniciado sesión con ".$mail."</div>";
         }
     }else {
         // no existe el usuario
-        echo "</div><center> El usuario, mail o contraseña son incorrectos.";
+        echo "<div style='margin-top: 40px;'><center> El usuario, mail o contraseña son incorrectos.</div>";
     }
 }
 
@@ -90,7 +90,7 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
 <body>
 
     <header>
-        <a href="admin.php"> 
+        <a href="index.php"> 
             <img src="imagenes/logo.png" alt="imagen logo" class="logo mx-auto d-block"> 
         </a>
     </header>
@@ -109,7 +109,7 @@ if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'
         </form>
         </div>  ANTERIOR FORM  -->
 
-        <div id="Contacto"><br>
+        <div id=""><br>
             <class="d-block auto img-fluid h-20">  
             <div class="container">
                 <div class="row">
